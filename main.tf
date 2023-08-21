@@ -11,13 +11,13 @@ terraform {
 provider "azurerm" {
   features {}
 
-  subscription_id = "3a6301fb-d5bf-4646-bd89-d506e7c3f2dd"
-  client_id       = "08a4808f-de8a-4fa2-828c-5ce3ad624046"
+  subscription_id = var.subscription_id
+  client_id       = var.client_id
   // client_certificate_path     = var.client_certificate_path
   //client_certificate_password = "24Y8Q~SopAxXsAHKVx9QeQiZTTEFYdKnCzbFPbR5"
-  client_secret = "24Y8Q~SopAxXsAHKVx9QeQiZTTEFYdKnCzbFPbR5"
-  tenant_id                   = "d52c9ea1-7c21-47b1-82a3-33a74b1f74b8"
-  
+  client_secret = var.client_secret
+  tenant_id     = var.tenant_id
+
 }
 
 resource "azurerm_resource_group" "example" {
