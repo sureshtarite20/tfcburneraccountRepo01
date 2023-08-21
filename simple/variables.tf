@@ -1,7 +1,7 @@
-variable "tenant_id" {}
-variable "subscription_id" {}
-variable "client_id" {}
-variable "client_secret" {}
+variable "tenantID" {}
+variable "subscriptionID" {}
+variable "clientID" {}
+variable "clientSecret" {}
 
-variable "resource_group_name" {}
-variable "resource_group_location" {}
+variable "RGName" {}
+variable "location" {}
