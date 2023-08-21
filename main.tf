@@ -10,14 +10,10 @@ terraform {
 # Configure the Microsoft Azure Provider
 provider "azurerm" {
   features {}
-
+  tenant_id       = var.tenant_id
   subscription_id = var.subscription_id
   client_id       = var.client_id
-  // client_certificate_path     = var.client_certificate_path
-  //client_certificate_password = "24Y8Q~SopAxXsAHKVx9QeQiZTTEFYdKnCzbFPbR5"
-  client_secret = var.client_secret
-  tenant_id     = var.tenant_id
-
+  client_secret   = var.client_secret
 }
 
 resource "azurerm_resource_group" "rg" {
@@ -26,12 +22,6 @@ resource "azurerm_resource_group" "rg" {
 }
 
 
-
-
-resource "azurerm_resource_group" "example" {
-  name     = "example-resources3"
-  location = "East US"
-}
 
 
 
